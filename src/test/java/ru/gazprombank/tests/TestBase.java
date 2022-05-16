@@ -1,9 +1,9 @@
-package cloud.autotests.tests;
+package ru.gazprombank.tests;
 
-import cloud.autotests.config.Project;
-import cloud.autotests.helpers.AllureAttachments;
-import cloud.autotests.helpers.DriverSettings;
-import cloud.autotests.helpers.DriverUtils;
+import ru.gazprombank.config.Project;
+import ru.gazprombank.helpers.AllureAttachments;
+import ru.gazprombank.helpers.DriverSettings;
+import ru.gazprombank.helpers.DriverUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;

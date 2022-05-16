@@ -1,4 +1,4 @@
-package cloud.autotests.config;
+package ru.gazprombank.config;
 
 import org.aeonbits.owner.Config;
 

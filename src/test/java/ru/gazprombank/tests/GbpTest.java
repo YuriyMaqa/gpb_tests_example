@@ -1,6 +1,6 @@
-package cloud.autotests.tests;
+package ru.gazprombank.tests;
 
-import cloud.autotests.helpers.DriverUtils;
+import ru.gazprombank.helpers.DriverUtils;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
