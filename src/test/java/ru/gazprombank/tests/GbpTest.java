@@ -33,7 +33,8 @@ public class GbpTest extends TestBase {
         });
 
         step("Проверка содержимого файла pdf 'Требования к обеспечению на первичном рынке' ", () -> {
-            File pdfDownload = $("#bx_3218110189_5066157").download();
+            File pdfDownload = $("#bx_3218110189_5066157")
+                    .shouldBe(Condition.visible, Duration.ofSeconds(10)).download();
             PDF pdf = new PDF(pdfDownload);
             assertThat(pdf.text).contains("Перечень требований к объекту недвижимости на первичном рынке");
         });
