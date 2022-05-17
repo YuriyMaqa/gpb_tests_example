@@ -1,6 +1,5 @@
 package ru.gazprombank.tests;
 
-import ru.gazprombank.helpers.DriverUtils;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
@@ -9,6 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import ru.gazprombank.helpers.DriverUtils;
 
 import java.io.File;
 import java.time.Duration;
@@ -132,11 +132,5 @@ public class GbpTest extends TestBase {
             $(".nr-formik-text__label").shouldBe(Condition.visible, Duration.ofSeconds(10));
             $(".nr-formik-text__label").shouldHave(text("Код из СМС"));
         });
-    }
-
-    @Test
-    void tenzortest() {
-        open("");
-
     }
 }
