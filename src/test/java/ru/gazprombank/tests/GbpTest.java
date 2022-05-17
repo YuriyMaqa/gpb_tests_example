@@ -133,4 +133,10 @@ public class GbpTest extends TestBase {
             $(".nr-formik-text__label").shouldHave(text("Код из СМС"));
         });
     }
+
+    @Test
+    void tenzortest() {
+        open("");
+
+    }
 }
