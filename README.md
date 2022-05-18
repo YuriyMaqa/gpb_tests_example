@@ -128,7 +128,7 @@ clean test
 > Тест специально спроектирован на падение, для наглядности.
 > Понимаю, что ошибка отправки смс не баг, а попадание номера в спам фильтр.
 > 
-> P.S. Тесты на проде это плохо  :red_heart:
+> P.S. Тесты на проде это плохо  :heart:
 
 <p align="center">
 <img title="Allure Behaviors" src="images/screenshots/allure _bug.jpeg">
