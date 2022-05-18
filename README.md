@@ -102,7 +102,11 @@ clean test
 >
 > <code>REMOTE_DRIVER_URL</code> – url селеноида.
 > 
-> <code>THREADS/code> – кол-во потоков для параллельного запуска.
+> <code>THREADS</code> – кол-во потоков для параллельного запуска.
+>
+
+
+
 
 
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Главная страница сборки Jenkins
@@ -128,14 +132,14 @@ clean test
 ### :pushpin: Основной дашборд
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/graphs.jpg">
+<img width="50%"  title="Allure Overview Dashboard" src="images/screenshots/graphs.jpg">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 > После завершения сборки бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом.
 <p align="center">
-<img title="Telegram Notifications" src="images/screenshots/telegram_bot.jpg">
+<img width="50%"  title="Telegram Notifications" src="images/screenshots/telegram_bot.jpg">
 </p>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
