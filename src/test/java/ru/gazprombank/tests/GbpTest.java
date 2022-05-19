@@ -28,7 +28,7 @@ public class GbpTest extends TestBase {
     @Description("Homework test")
     @DisplayName("Проверка скачивания файла pdf 'Требования к обеспечению на первичном рынке' ")
     void generatedTest() {
-        step("open /documents_and_tariffs/?fs=722#119", () -> {
+        step("Открываем страницу  \"документы и тарифы\"", () -> {
             open("https://www.gazprombank.ru/documents_and_tariffs/?fs=722#119");
         });
 
@@ -45,10 +45,10 @@ public class GbpTest extends TestBase {
     @Description("Homework test")
     @DisplayName("Проверка открытия страницы по тексту в заголовке")
     void titleTest() {
-        step("Open url 'https://www.gazprombank.ru/'", () ->
+        step("Открываем главную страницу Газпромбанка", () ->
                 open("https://www.gazprombank.ru/"));
 
-        step("Page title should have text 'Газпромбанк — «Газпромбанк» (Акционерное общество)'", () -> {
+        step("Проверяем наличие в загаловке текста 'Газпромбанк — «Газпромбанк» (Акционерное общество)'", () -> {
             String expectedTitle = "Газпромбанк — «Газпромбанк» (Акционерное общество)";
             String actualTitle = title();
 
@@ -60,10 +60,10 @@ public class GbpTest extends TestBase {
     @Description("Homework test")
     @DisplayName("Проверка на ошибки в консоль логе страницы")
     void consoleShouldNotHaveErrorsTest() {
-        step("Open url 'https://www.gazprombank.ru/'", () ->
+        step("Открываем главную страницу Газпромбанка", () ->
                 open("https://www.gazprombank.ru/"));
 
-        step("Console logs should not contain text 'SEVERE'", () -> {
+        step("Проверяем что в логах консоли нет ошибок", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
 
