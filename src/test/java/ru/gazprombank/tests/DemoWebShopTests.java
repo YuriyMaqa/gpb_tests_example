@@ -23,8 +23,8 @@ public class DemoWebShopTests extends TestBase{
             password = "qaguru@qa.guru1",
             authCookieName = "NOPCOMMERCE.AUTH";
 
-    @BeforeAll
-    static void configureApi() {
+    @BeforeEach
+     void configureApi() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "http://demowebshop.tricentis.com";
