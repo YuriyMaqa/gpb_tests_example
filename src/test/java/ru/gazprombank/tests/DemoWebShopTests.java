@@ -19,12 +19,12 @@ import static ru.gazprombank.helpers.CustomApiListener.withCustomTemplates;
 
 @Tag("demowebshop")
 public class DemoWebShopTests extends TestBase{
-    static String login = "qaguru@qa.guru",
+     String login = "qaguru@qa.guru",
             password = "qaguru@qa.guru1",
             authCookieName = "NOPCOMMERCE.AUTH";
 
     @BeforeAll
-    static void configure() {
+    static void configureApi() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "http://demowebshop.tricentis.com";
