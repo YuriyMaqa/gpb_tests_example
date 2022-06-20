@@ -19,7 +19,7 @@ import static com.codeborne.selenide.WebDriverRunner.hasWebDriverStarted;
 @ExtendWith({AllureJunit5.class})
 public class TestBaseApi {
     @BeforeAll
-    static void setUp() {
+    static void setUpApi() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
         Configuration.baseUrl = "http://demowebshop.tricentis.com";
@@ -27,7 +27,7 @@ public class TestBaseApi {
     }
 
     @AfterEach
-    public void addAttachments() {
+    public void addAttachmentsDemoWebShop() {
         if (hasWebDriverStarted()) {
 
             String sessionId = DriverUtils.getSessionId();
