@@ -1,11 +1,7 @@
 package ru.gazprombank.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.restassured.AllureRestAssured;
-import io.qameta.allure.selenide.AllureSelenide;
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
 
@@ -18,20 +14,10 @@ import static org.hamcrest.Matchers.notNullValue;
 import static ru.gazprombank.helpers.CustomApiListener.withCustomTemplates;
 
 @Tag("demowebshop")
-public class DemoWebShopTests extends TestBase{
+public class DemoWebShopTests extends TestBaseApi {
      String login = "qaguru@qa.guru",
             password = "qaguru@qa.guru1",
             authCookieName = "NOPCOMMERCE.AUTH";
-
-    @BeforeEach
-     void configureApi() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
-        Configuration.baseUrl = "http://demowebshop.tricentis.com";
-        RestAssured.baseURI = "http://demowebshop.tricentis.com";
-    }
-
-
 
     @Test
     @DisplayName("Successful authorization to some demowebshop (UI)")
