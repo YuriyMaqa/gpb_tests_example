@@ -12,6 +12,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import static com.codeborne.selenide.WebDriverRunner.hasWebDriverStarted;
+
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
@@ -23,17 +25,17 @@ public class TestBase {
 
     @AfterEach
     public void addAttachments() {
-        String sessionId = DriverUtils.getSessionId();
+        if (hasWebDriverStarted()) {
 
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-//        AllureAttachments.attachNetwork(); // todo
-        AllureAttachments.addBrowserConsoleLogs();
+            String sessionId = DriverUtils.getSessionId();
+            AllureAttachments.addScreenshotAs("Last screenshot");
+            AllureAttachments.addPageSource();
+            AllureAttachments.addBrowserConsoleLogs();
+            Selenide.closeWebDriver();
 
-        Selenide.closeWebDriver();
-
-        if (Project.isVideoOn()) {
-            AllureAttachments.addVideo(sessionId);
+            if (Project.isVideoOn()) {
+                AllureAttachments.addVideo(sessionId);
+            }
         }
     }
 }

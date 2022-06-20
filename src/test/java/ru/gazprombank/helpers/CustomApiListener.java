@@ -2,7 +2,7 @@ package ru.gazprombank.helpers;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 
-public class AllureRestAssuredFilter {
+public class CustomApiListener {
     private static final AllureRestAssured FILTER = new AllureRestAssured();
 
     public static AllureRestAssured withCustomTemplates() {
@@ -10,4 +10,5 @@ public class AllureRestAssuredFilter {
         FILTER.setResponseTemplate("response.ftl");
         return FILTER;
     }
+
 }

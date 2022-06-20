@@ -71,3 +71,9 @@ task gpb(type: Test) {
         includeTags 'gpb'
     }
 }
+
+task demowebshop(type: Test) {
+    useJUnitPlatform {
+        includeTags 'demowebshop'
+    }
+}
